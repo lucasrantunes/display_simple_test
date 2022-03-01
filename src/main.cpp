@@ -10,14 +10,18 @@
 #define VEL_DISP2 PA9 //unidades
 
 void setup() {
-  pinMode(CI_DISPA, OUTPUT); //MSB
-  pinMode(CI_DISPB, OUTPUT); //LSB
+  pinMode(CI_DISPA, OUTPUT); 
+  pinMode(CI_DISPB, OUTPUT); 
   pinMode(CI_DISPC, OUTPUT);
   pinMode(CI_DISPD, OUTPUT);
+
   pinMode(VEL_DISP1, OUTPUT); //dezenas
+  pinMode(VEL_DISP2, OUTPUT); //unidades
 
   digitalWrite(VEL_DISP2, HIGH);  //desativa o transistor que fecha o circuito do display da unidade
   digitalWrite(VEL_DISP1, LOW); //ativa o transistor que fecha o circuito do display da dezena
+  
+  // mostra zero
   digitalWrite(CI_DISPA, LOW);
   digitalWrite(CI_DISPB, LOW);
   digitalWrite(CI_DISPC, LOW);
